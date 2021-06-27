@@ -88,7 +88,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script >
-    fetch("http://www.emsifa.com/api-wilayah-indonesia/api/provinces.json")
+    fetch("https://www.emsifa.com/api-wilayah-indonesia/api/provinces.json")
         .then(Response=>Response.json())
         .then(Data=>{
             console.log(Data.length);
@@ -102,7 +102,7 @@
         xEvent1.addEventListener("change", regency);
         function regency(){
             var province = xEvent1.value;
-            fetch("http://www.emsifa.com/api-wilayah-indonesia/api/regencies/"+province+".json")
+            fetch("https://www.emsifa.com/api-wilayah-indonesia/api/regencies/"+province+".json")
                 .then(Response=>Response.json())
                 .then(Data=>{
                     console.log(Data.length);
@@ -117,7 +117,7 @@
             xEvent2.addEventListener("change", district);
         function district(){
             var regency = xEvent2.value;
-            fetch("http://www.emsifa.com/api-wilayah-indonesia/api/districts/"+regency+".json")
+            fetch("https://www.emsifa.com/api-wilayah-indonesia/api/districts/"+regency+".json")
                 .then(Response=>Response.json())
                 .then(Data=>{
                     console.log(Data.length);
@@ -131,7 +131,7 @@
             xEvent3.addEventListener("change", kelurahan);
         function kelurahan(){
             var kelurahan = xEvent3.value;
-            fetch("http://www.emsifa.com/api-wilayah-indonesia/api/villages/"+ kelurahan+".json")
+            fetch("https://www.emsifa.com/api-wilayah-indonesia/api/villages/"+ kelurahan+".json")
                 .then(Response=>Response.json())
                 .then(Data=>{
                     console.log(Data);
